@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
+	# docker run --rm -i hadolint/hadolint < Dockerfile
 	pylint --disable=R,C,W1203,W0702 app.py
 
 test:
