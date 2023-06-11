@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-classtask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-classtask
+  template:
+    metadata:
+      labels:
+        app: k8s-classtask
+    spec:
+      containers:
+      - name: k8s-classtask
+        image: minhalzafar/flaskapp:latest
+        ports:
+        - containerPort: 8080
